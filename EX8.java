@@ -1,0 +1,31 @@
+//21CE141 : PRIYANSHI TALAVIYA
+package com.info;
+import java.util.Scanner;
+class EX8{
+char answer[][] = new char[8][10];
+char key[] = {'D','B','D','C','C','D','A','E','A','D'};
+public void getAnswer()
+{
+Scanner sc = new Scanner(System.in);
+for (int i = 0; i < 8; i++) {
+System.out.println("Enter answer of Student - "+(i+1));
+for (int j = 0; j < 10; j++) {
+answer[i][j] = sc.next().charAt(0);
+} } }
+void checkAnswer()
+{
+for (int i = 0; i < 8; i++) {
+int count = 0;
+for (int j = 0; j < 10; j++) {
+if(answer[i][j] == key[j])
+{
+count++;
+} }
+System.out.println("Marks of Student - "+(i+1)+" : "+count);
+} }
+public static void main(String[] args) {
+pr8 p = new pr8();
+p.getAnswer();
+System.out.println("\n");
+p.checkAnswer();
+} }
